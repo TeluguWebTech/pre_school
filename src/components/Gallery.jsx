@@ -8,28 +8,28 @@ const LevelsOfLearning = () => {
       title: "DAY CARE (18 MONTHS AND ABOVE)",
       description:
         "Mother's Pride Day Care offers a nurturing and stimulating child day care program with a team of dedicated care givers.",
-      image: "https://via.placeholder.com/500x300", // Replace with actual image URL
+      image: "learn/level-1.jpg",
     },
     {
       id: 2,
       title: "PLAY GROUP (2 YEARS AND ABOVE)",
       description:
         "At the age of two, children begin to develop independence. It is the best time to explore their developmental milestones.",
-      image: "https://via.placeholder.com/500x300", // Replace with actual image URL
+        image: "learn/level-2.jpg",
     },
     {
       id: 3,
       title: "NURSERY (3 YEARS AND ABOVE)",
       description:
         "Nursery programs focus on fostering social skills, creativity, and confidence, helping children to prepare for primary school.",
-      image: "https://via.placeholder.com/500x300", // Replace with actual image URL
+        image: "learn/level-3.jpg",
     },
     {
       id: 4,
       title: "KINDERGARTEN (4 YEARS AND ABOVE)",
       description:
         "Kindergarten is the time to strengthen foundational skills and build curiosity for learning in a structured environment.",
-      image: "https://via.placeholder.com/500x300", // Replace with actual image URL
+        image: "learn/level-4.jpg",
     },
   ];
 

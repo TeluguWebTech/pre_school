@@ -29,7 +29,7 @@ const AnimatedIcons = () => {
             <div className="bg-indigo-800 rounded-full w-16 h-16 flex items-center justify-center text-3xl mb-3">
               {item.icon}
             </div>
-            <p className="text-lg font-medium">{item.text}</p>
+            <p className="text-lg font-medium text-white">{item.text}</p>
           </motion.div>
         ))}
       </div>

@@ -8,26 +8,29 @@ const Features = () => {
       title: "Interactive Learning",
       description:
         "Engaging methods and activities to make learning fun and effective.",
-      icon: "https://via.placeholder.com/80", // Replace with actual icon image URL
+        icon: "feature/f-1.png", 
     },
     {
       id: 2,
       title: "Personalized Curriculum",
       description:
         "Tailored lessons and activities based on individual learning styles.",
-      icon: "https://via.placeholder.com/80", // Replace with actual icon image URL
+        icon: "feature/f-2.png", 
+
     },
     {
       id: 3,
       title: "Qualified Teachers",
       description: "Experienced educators to guide and support every student.",
-      icon: "https://via.placeholder.com/80", // Replace with actual icon image URL
+      icon: "feature/f-3.png", 
+ 
     },
     {
       id: 4,
       title: "Safe & Secure Environment",
       description: "A nurturing space where children feel safe and cared for.",
-      icon: "https://via.placeholder.com/80", // Replace with actual icon image URL
+      icon: "feature/f-4.png", 
+
     },
   ];
 

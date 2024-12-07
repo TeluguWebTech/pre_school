@@ -2,19 +2,18 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-// Main Component for Image Gallery
 const PhotoGallary = () => {
   const [modalImage, setModalImage] = useState(null);
 
   const images = [
-    { id: 1, src: 'https://via.placeholder.com/800x600', alt: 'Image 1' },
-    { id: 2, src: 'https://via.placeholder.com/800x600', alt: 'Image 2' },
-    { id: 3, src: 'https://via.placeholder.com/800x600', alt: 'Image 3' },
-    { id: 4, src: 'https://via.placeholder.com/800x600', alt: 'Image 4' },
-    { id: 5, src: 'https://via.placeholder.com/800x600', alt: 'Image 5' },
-    { id: 6, src: 'https://via.placeholder.com/800x600', alt: 'Image 6' },
-    { id: 5, src: 'https://via.placeholder.com/800x600', alt: 'Image 5' },
-    { id: 6, src: 'https://via.placeholder.com/800x600', alt: 'Image 6' },
+    { id: 1, src: 'gallery/g-1.jpg', alt: 'Image 1' },
+    { id: 2, src: 'gallery/g-2.jpg', alt: 'Image 2' },
+    { id: 3, src: 'gallery/g-3.jpg', alt: 'Image 3' },
+    { id: 4, src: 'gallery/g-4.jpg', alt: 'Image 4' },
+    { id: 5, src: 'gallery/g-5.jpg', alt: 'Image 5' },
+    { id: 6, src: 'gallery/g-6.jpg', alt: 'Image 6' },
+    { id: 5, src: 'gallery/g-7.jpg', alt: 'Image 5' },
+    { id: 6, src: 'gallery/g-8.jpg', alt: 'Image 6' },
   ];
 
   const openModal = (image) => setModalImage(image);
@@ -63,9 +62,7 @@ const PhotoGallary = () => {
   );
 };
 
-// Gallery Item Component
 const GalleryItem = ({ image, openModal }) => {
-  // Intersection observer hook for scroll-based animations
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -74,10 +71,12 @@ const GalleryItem = ({ image, openModal }) => {
   return (
     <motion.div
       ref={ref}
-      className="group relative overflow-hidden rounded-lg shadow-lg"
+      className="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.8 }}
       transition={{ duration: 0.6, type: 'spring', stiffness: 120 }}
+      onClick={() => openModal(image)}
+
     >
       <img
         src={image.src}
@@ -86,12 +85,12 @@ const GalleryItem = ({ image, openModal }) => {
       />
       <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <div className="flex justify-center items-center h-full">
-          <motion.button
+          {/* <motion.button
             className="text-white text-4xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             onClick={() => openModal(image)}
           >
             +
-          </motion.button>
+          </motion.button> */}
         </div>
       </div>
     </motion.div>
